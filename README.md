@@ -13,23 +13,25 @@ Recommender systems produce a list of recommendations in any of the two ways –
 I have implemented a movie recommender system that follows the underlying principles of collaborative filtering (similar to what Netflix or Amazon uses), applying __Singular Value Decomposition (SVD)__ and Cosine Similarity and __Principal Component Analysis(PCA)__.
 
 ## Dataset
-I have used __MovieLens 1M__ dataset to train teh model. It contains 1,000,209 anonymous ratings of approximately 3,900 movies made by 6,040 MovieLens users who joined MovieLens in 2000.
+I have used __MovieLens 1M__ dataset to train the model. It contains 1,000,209 anonymous ratings of approximately 3,900 movies made by 6,040 MovieLens users who joined MovieLens in 2000.
 &nbsp;
 ![dataset previw](https://media.geeksforgeeks.org/wp-content/uploads/7-40.png)
 &nbsp;
 
 ## Technical Aspect
 
-* Firstly, i made a matrix with all the movies against their ratings.
-* Second part is image processing where we extract features from training set.
-* Last part is generating captions using extracted features from images.   
+* Firstly, i made a matrix with all the movies against all the users.
+* Next, I normalised it and computed SVD.
+* Then, cosine similarity as claculated and top results are shown as recommendations.
+* Lastly, the model was deployed on Heroku using Flask.
+&nbsp;
+<img src="https://miro.medium.com/max/1313/1*x8gTiprhLs7zflmEn1UjAQ.png" width="700" height="700">
+&nbsp;
 
 ## Tech Stack
 
-* Tensorflow
-* Keras
 * Pandas
 * NumPy
-* nltk ( Natural language toolkit)
 * Jupyter
+* Flask
 
